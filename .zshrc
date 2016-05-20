@@ -224,6 +224,8 @@ alias perms="stat -c '%A %a %n'"
 # expand sudo aliases
 alias sudo="sudo "
 
+# use Vim instead of Vi
+alias vi="vim"
 
 ##
 # Functions
@@ -379,3 +381,12 @@ fi
 if [[ $LANG == "C"  || $LANG == "" ]]; then
 	>&2 echo "$fg[red]The \$LANG variable is not set. This can cause a lot of problems.$reset_color"
 fi
+
+##
+# Antigen Modules
+#
+source $XDG_CONFIG_HOME/antigen.zsh
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen apply
