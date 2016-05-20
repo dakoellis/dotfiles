@@ -18,7 +18,7 @@ if [[ -e /usr/share/zsh/site-contrib/powerline.zsh ]]; then
 else
 	# Default colors:
 	# Cyan for users, red for root, magenta for system users
-	local _time="%{$fg[yellow]%}[%*]"
+#	local _time="%{$fg[yellow]%}[%*]"
 	local _path="%B%{$fg[green]%}%(8~|...|)%7~"
 	local _usercol
 	if [[ $EUID -lt 1000 ]]; then
@@ -30,7 +30,8 @@ else
 	local _user="%{$_usercol%}%n@%M"
 	local _prompt="%{$fg[white]%}${(r:$SHLVL*2::%#:)}"
 
-	PROMPT="$_time $_user $_path $_prompt%b%f%k "
+#	PROMPT="$_time $_user $_path $_prompt%b%f%k "
+	PROMPT="$_user $_path $_prompt%b%f%k "
 
 	RPROMPT='${vcs_info_msg_0_}' # git branch
 	if [[ ! -z "$SSH_CLIENT" ]]; then
