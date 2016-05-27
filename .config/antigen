@@ -1,0 +1,36 @@
+
+
+##
+# Antigen Modules
+#
+antigen bundle powerline/powerline
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle powerline/fonts
+antigen bundle larsenwork/monoid
+antigen bundle gabrielelana/awesome-terminal-fonts
+
+##
+# Oh-My-Zsh plugins
+#
+antigen use oh-my-zsh
+antigen bundle z
+antigen bundle sudo
+# Current Theme
+antigen theme bhilburn/powerlevel9k powerlevel9k
+
+##
+# Theme Settings
+#
+
+# Power Level 9K 
+DEFAULT_USER="$USER"
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( context dir)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history vcs time)
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_COLOR_SCHEME='light'
+# Apply Everything
+antigen apply
+
