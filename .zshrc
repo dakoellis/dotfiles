@@ -386,7 +386,4 @@ fi
 # Antigen Modules
 #
 source $XDG_CONFIG_HOME/antigen.zsh
-antigen bundle git
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen apply
+source $XDG_CONFIG_HOME/antigen
